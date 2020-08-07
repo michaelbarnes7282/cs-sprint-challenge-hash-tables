@@ -3,7 +3,16 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
-
+    result = []
+    ht = {}
+    for array in arrays:
+        for elem in array:
+            if elem not in ht:
+                ht[elem] = elem
+            else:
+                result.append(ht[elem])
+    print(ht)
+    print(result)
     return result
 
 
